@@ -1,0 +1,47 @@
+$step: 8px;
+
+@mixin font($font-size: 18px, $font-weight: 400, $line-height: 28px, $letter-spacing: normal) {
+// native mixins not support vars
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin font18 {
+  @include font(18px, 400, 28px, normal);
+}
+
+@mixin font16 {
+  @include font(2*$step, 400, 3*$step, normal);
+}
+
+@mixin font14 {
+  @include font(14px, 400, 20px, normal);
+}
+
+@mixin flex ($align-items: center, $justify-content: center, $gap: 0) {
+  display: flex;
+  align-items: $align-items; // default stretch
+  justify-content: $justify-content; // default flex-start
+  gap: $gap;
+}
+
+$bg-main-color: #171919;
+$main-color: #2a2c2c;
+$second-dark-color: #1f2020;
+$second-light-color: #828c8c;
+$a-light-color: #2aa5a0;
+$a-dark-color: #1d706d;
+$a-hover-color: #248480;
+$text-light-color: #eef2f1;
+$text-dark-color: #c5d3d3;
+$pre-color: #202828;
+
+// for media queries
+$b-computer-screen-width: 1440px; // - paddings
+$s-computer-screen-width: 1280px; // - left menu text
+$b-tablet-screen-width: 1025px; // - right menu
+$s-tablet-screen-width: 960px; // - text-size
+$b-phone-screen-width: 770px; // - left menu
+$s-phone-screen-width: 576px; // - paddings
